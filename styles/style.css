@@ -20,5 +20,36 @@ html {
 }
 
 body {
-  background-color: var(--very-dark-blue);
+  /* background-color: var(--very-dark-blue); */
+  background-image: url(../design/mobile-design.jpg);
+}
+
+main {
+  padding: 4.5rem 1.25rem;
+  opacity: 0.75;
+}
+
+.card-profile {
+  background-color: var(--dark-blue);
+  border-radius: 1rem;
+}
+
+.profile {
+  background-color: var(--desaturated-blue);
+  border-radius: inherit;
+  padding: 1em;
+  display: flex;
+  align-items: center;
+}
+
+.title {
+  font-weight: 400;
+  font-size: small;
+}
+
+.profile-pic {
+  width: 3.75rem;
+  height: 3.75rem;
+  border-radius: 50%;
+  border: white solid 0.25rem;
 }
