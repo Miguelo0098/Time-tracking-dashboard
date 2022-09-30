@@ -29,27 +29,41 @@ main {
   opacity: 0.75;
 }
 
-.card-profile {
+.profile {
   background-color: var(--dark-blue);
   border-radius: 1rem;
 }
 
-.profile {
+.profile__card {
   background-color: var(--desaturated-blue);
   border-radius: inherit;
-  padding: 1em;
+  padding: 1.75rem;
   display: flex;
   align-items: center;
+  gap: 1rem;
 }
 
-.title {
+.profile__card__title {
   font-weight: 400;
-  font-size: small;
+  font-size: 16px;
+  color: var(--pale-blue);
 }
 
-.profile-pic {
+.profile__card__title__name {
+  font-weight: 300;
+  font-size: 24px;
+  color: white;
+}
+
+.profile__card__pic {
   width: 3.75rem;
   height: 3.75rem;
   border-radius: 50%;
   border: white solid 0.25rem;
+}
+
+.profile__periods {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
