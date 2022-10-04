@@ -63,7 +63,47 @@ main {
 }
 
 .profile__periods {
+  padding: 1.25rem 0;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
+}
+
+.profile__periods__nav {
+  flex: 1 1 33%;
+  text-align: center;
+}
+
+.work {
+  background-color: var(--soft-orange);
+}
+
+.play {
+  background-color: var(--soft-blue);
+}
+
+.study {
+  background-color: var(--soft-red);
+}
+.exercise {
+  background-color: var(--violet);
+}
+.social {
+  background-color: var(--lime-green);
+}
+.self_care {
+  background-color: var(--soft-yellow);
+}
+
+
+.list__item {
+  border-radius: 1rem;
+  margin: 1.25rem 0;
+}
+
+.list__item__card {
+  border-radius: inherit;
+  margin-top: 2rem;
+  padding: 2rem;
+  background-color: var(--dark-blue);
 }
