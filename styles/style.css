@@ -72,34 +72,49 @@ main {
   text-align: center;
 }
 
-.profile__periods__nav span{
+.profile__periods__nav span {
   color: var(--desaturated-blue);
   transition: all 0.2s ease-in-out;
-
 }
 
-.profile__periods__nav span:hover{
+.profile__periods__nav span:hover {
   cursor: pointer;
   color: white;
 }
 
 .work {
   background-color: var(--soft-orange);
+  background-image: url(../images/icon-work.svg);
 }
 .play {
   background-color: var(--soft-blue);
+  background-image: url(../images/icon-play.svg);
 }
 .study {
   background-color: var(--soft-red);
+  background-image: url(../images/icon-study.svg);
 }
 .exercise {
   background-color: var(--lime-green);
+  background-image: url(../images/icon-exercise.svg);
 }
 .social {
   background-color: var(--violet);
+  background-image: url(../images/icon-social.svg);
 }
 .self_care {
   background-color: var(--soft-yellow);
+  background-image: url(../images/icon-self-care.svg);
+}
+
+.work,
+.play,
+.study,
+.exercise,
+.social,
+.self_care {
+  background-position: top right 1rem;
+  background-repeat: no-repeat;
 }
 
 .list__item {
@@ -115,7 +130,8 @@ main {
   transition: all 0.2s ease-in-out;
 }
 
-.list__item__card__info, .list__item__card__data {
+.list__item__card__info,
+.list__item__card__data {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -129,19 +145,19 @@ main {
   transition: all 0.2s ease-in-out;
 }
 
-.list__item__card__info__icon:hover svg{
+.list__item__card__info__icon:hover svg {
   color: white;
 }
 
-.list__item__card__data__time{
+.list__item__card__data__time {
   font-size: 1.75rem;
   font-weight: 300;
 }
 
-.list__item__card__data__last{
+.list__item__card__data__last {
   font-size: 0.8rem;
   font-weight: 400;
-  color: var(--pale-blue)
+  color: var(--pale-blue);
 }
 
 .list__item__card:hover {
