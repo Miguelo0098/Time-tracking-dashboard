@@ -9,6 +9,7 @@
 
   --very-dark-blue: hsl(226, 43%, 10%);
   --dark-blue: hsl(235, 46%, 20%);
+  --dark-desaturated-blue: hsl(235, 46%, 40%);
   --desaturated-blue: hsl(235, 45%, 61%);
   --pale-blue: hsl(236, 100%, 87%);
 }
@@ -21,10 +22,16 @@ html {
 
 body {
   background-color: var(--very-dark-blue);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
 }
 
 main {
+  flex-grow: 1;
   padding: 4.5rem 1.25rem;
+  max-width: 375px;
 }
 
 .profile {
@@ -117,9 +124,15 @@ main {
   background-repeat: no-repeat;
 }
 
+.list {
+  margin-top: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
 .list__item {
   border-radius: 1rem;
-  margin: 1.25rem 0;
   padding-top: 2.1rem;
 }
 
@@ -145,8 +158,8 @@ main {
   transition: all 0.2s ease-in-out;
 }
 
-.list__item__card__info__icon:hover svg {
-  color: white;
+.list__item__card__info__icon:hover {
+  filter: brightness(0) invert(1);
 }
 
 .list__item__card__data__time {
@@ -162,5 +175,48 @@ main {
 
 .list__item__card:hover {
   cursor: pointer;
-  background-color: var(--desaturated-blue);
+  background-color: var(--dark-desaturated-blue);
+}
+
+@media screen and (min-width: 1024px) {
+  main {
+    max-width: 1024px;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 3fr;
+    gap: 1.25rem;
+  }
+
+  .profile__card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .profile__card__pic {
+    border: white solid 0.15rem;
+  }
+
+  .profile__card__title {
+    font-size: 12px;
+    padding: 1.5rem 0;
+  }
+
+  .profile__card__title__name {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+
+  .profile__periods {
+    padding: 1.25rem 1.75rem;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .list {
+    margin: 0;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
