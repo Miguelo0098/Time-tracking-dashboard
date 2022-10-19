@@ -179,8 +179,12 @@ main {
 }
 
 @media screen and (min-width: 1024px) {
+
   main {
     max-width: 1024px;
+  }
+
+  section {
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: 1fr 3fr;
@@ -190,6 +194,7 @@ main {
   .profile__card {
     flex-direction: column;
     align-items: flex-start;
+    gap: unset;
   }
 
   .profile__card__pic {
@@ -198,7 +203,7 @@ main {
 
   .profile__card__title {
     font-size: 12px;
-    padding: 1.5rem 0;
+    padding: 1.6rem 0;
   }
 
   .profile__card__title__name {
@@ -207,10 +212,15 @@ main {
   }
 
   .profile__periods {
-    padding: 1.25rem 1.75rem;
+    padding: 1.5rem 1.75rem;
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
+    gap: 0.8rem;
+  }
+
+  .profile__periods__nav span{
+    font-size: 0.9rem;
   }
 
   .list {
@@ -218,5 +228,29 @@ main {
     display: grid;
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .list__item__card{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .list__item__card__info__name {
+    font-size: 0.8rem;
+  }
+
+  .list__item__card__data{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .list__item__card__data__time{
+    font-size: 2.5rem;
+  }
+
+  .list__item__card__data__last{
+    font-size: 0.7rem;
   }
 }
