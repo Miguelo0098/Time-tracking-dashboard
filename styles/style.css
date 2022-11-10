@@ -84,10 +84,11 @@ main {
   transition: all 0.2s ease-in-out;
 }
 
-.profile__periods__nav span:hover {
+.profile__periods__nav span:hover, .profile__periods__nav.--active span {
   cursor: pointer;
   color: white;
 }
+
 
 .work {
   background-color: var(--soft-orange);

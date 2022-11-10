@@ -33,6 +33,10 @@
         color: hsl(228, 45%, 44%);
       }
     </style>
+    <script src="js/main.js"></script>
+    <script>
+      window.onload = loadContent()
+    </script>
   </head>
   <body>
     <main>
@@ -52,109 +56,14 @@
             </h1>
           </div>
           <div class="profile__periods">
-            <nav class="profile__periods__nav"><span>Daily</span></nav>
-            <nav class="profile__periods__nav"><span>Weekly</span></nav>
-            <nav class="profile__periods__nav"><span>Monthly</span></nav>
+            <nav class="profile__periods__nav --active"><span onclick="handleTimeframeUpdate(this)">Daily</span></nav>
+            <nav class="profile__periods__nav"><span onclick="handleTimeframeUpdate(this)">Weekly</span></nav>
+            <nav class="profile__periods__nav"><span onclick="handleTimeframeUpdate(this)">Monthly</span></nav>
           </div>
         </div>
   
         <div class="list">
-          <div class="list__item work">
-            <div class="list__item__card">
-              <div class="list__item__card__info">
-                <h2 class="list__item__card__info__name">Work</h2>
-                <img
-                  class="list__item__card__info__icon"
-                  src="./images/icon-ellipsis.svg"
-                  alt=""
-                />
-              </div>
-              <div class="list__item__card__data">
-                <p class="list__item__card__data__time">32hrs</p>
-                <p class="list__item__card__data__last">Last Week - 36hrs</p>
-              </div>
-            </div>
-          </div>
-          <div class="list__item play">
-            <div class="list__item__card">
-              <div class="list__item__card__info">
-                <h2 class="list__item__card__info__name">Work</h2>
-                <img
-                  class="list__item__card__info__icon"
-                  src="./images/icon-ellipsis.svg"
-                  alt=""
-                />
-              </div>
-              <div class="list__item__card__data">
-                <p class="list__item__card__data__time">32hrs</p>
-                <p class="list__item__card__data__last">Last Week - 36hrs</p>
-              </div>
-            </div>
-          </div>
-          <div class="list__item study">
-            <div class="list__item__card">
-              <div class="list__item__card__info">
-                <h2 class="list__item__card__info__name">Work</h2>
-                <img
-                  class="list__item__card__info__icon"
-                  src="./images/icon-ellipsis.svg"
-                  alt=""
-                />
-              </div>
-              <div class="list__item__card__data">
-                <p class="list__item__card__data__time">32hrs</p>
-                <p class="list__item__card__data__last">Last Week - 36hrs</p>
-              </div>
-            </div>
-          </div>
-          <div class="list__item exercise">
-            <div class="list__item__card">
-              <div class="list__item__card__info">
-                <h2 class="list__item__card__info__name">Work</h2>
-                <img
-                  class="list__item__card__info__icon"
-                  src="./images/icon-ellipsis.svg"
-                  alt=""
-                />
-              </div>
-              <div class="list__item__card__data">
-                <p class="list__item__card__data__time">32hrs</p>
-                <p class="list__item__card__data__last">Last Week - 36hrs</p>
-              </div>
-            </div>
-          </div>
-          <div class="list__item social">
-            <div class="list__item__card">
-              <div class="list__item__card__info">
-                <h2 class="list__item__card__info__name">Work</h2>
-                <img
-                  class="list__item__card__info__icon"
-                  src="./images/icon-ellipsis.svg"
-                  alt=""
-                />
-              </div>
-              <div class="list__item__card__data">
-                <p class="list__item__card__data__time">32hrs</p>
-                <p class="list__item__card__data__last">Last Week - 36hrs</p>
-              </div>
-            </div>
-          </div>
-          <div class="list__item self_care">
-            <div class="list__item__card">
-              <div class="list__item__card__info">
-                <h2 class="list__item__card__info__name">Self Care</h2>
-                <img
-                  class="list__item__card__info__icon"
-                  src="./images/icon-ellipsis.svg"
-                  alt=""
-                />
-              </div>
-              <div class="list__item__card__data">
-                <p class="list__item__card__data__time">2hrs</p>
-                <p class="list__item__card__data__last">Last Week - 2hrs</p>
-              </div>
-            </div>
-          </div>
+          
         </div>
       </section>
     </main>
