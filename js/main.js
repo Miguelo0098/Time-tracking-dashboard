@@ -3,6 +3,7 @@ const TIMEFRAMES = {
   WEEKLY: "weekly",
   MONTHLY: "monthly",
 };
+let data = [];
 
 function getData() {
   return fetch("../data.json")
@@ -36,24 +37,23 @@ function getPreviousTimeframeText(previous, timeframe) {
   return texts[timeframe];
 }
 
-function loadContent() {
-  getData().then((data) => {
-    const list = document.getElementsByClassName("list")[0];
-    list.innerHTML = "";
-    data.forEach((item) => {
-      const { title, timeframes } = item;
-      const activeTimeframe =
-        getActiveTimeframe()?.toLowerCase() || TIMEFRAMES.DAILY;
-      const timeframe = timeframes[activeTimeframe];
-      const currentText = `${timeframe.current}${getSuffix(timeframe.current)}`;
-      const previousText = getPreviousTimeframeText(
-        timeframe.previous,
-        activeTimeframe
-      );
+function insertContent() {
+  const list = document.getElementsByClassName("list")[0];
+  list.innerHTML = "";
+  data.forEach((item) => {
+    const { title, timeframes } = item;
+    const activeTimeframe =
+      getActiveTimeframe()?.toLowerCase() || TIMEFRAMES.DAILY;
+    const timeframe = timeframes[activeTimeframe];
+    const currentText = `${timeframe.current}${getSuffix(timeframe.current)}`;
+    const previousText = getPreviousTimeframeText(
+      timeframe.previous,
+      activeTimeframe
+    );
 
-      const htmlElement = `<div class="list__item ${title
-        .toLowerCase()
-        .replace(" ", "_")}">
+    const htmlElement = `<div class="list__item ${title
+      .toLowerCase()
+      .replace(" ", "_")}">
         <div class="list__item__card">
           <div class="list__item__card__info">
             <h2 class="list__item__card__info__name">${title}</h2>
@@ -70,13 +70,19 @@ function loadContent() {
         </div>
       </div>`;
 
-      list.innerHTML += htmlElement;
-    });
+    list.innerHTML += htmlElement;
   });
 }
 
 function handleTimeframeUpdate(id) {
   resetNavs();
   id.parentElement.className += " --active";
-  loadContent();
+  insertContent();
 }
+
+const load = () => {
+  getData().then((response) => {
+    data = response;
+    insertContent();
+  });
+};
