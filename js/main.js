@@ -6,7 +6,7 @@ const TIMEFRAMES = {
 let data = [];
 
 function getData() {
-  return fetch("../data.json")
+  return fetch("../data/data.json")
     .then((response) => response.json())
     .catch((err) => console.log(err));
 }
