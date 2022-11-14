@@ -39,7 +39,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: TODO
+- Solution URL: [Time Tracking Dashboard](https://miguelo0098.github.io/Time-tracking-dashboard/)
 
 ## My process
 
