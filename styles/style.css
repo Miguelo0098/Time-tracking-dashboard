@@ -32,6 +32,8 @@ main {
   flex-grow: 1;
   padding: 4.5rem 1.25rem;
   max-width: 375px;
+  display: grid;
+  place-items: center;
 }
 
 .profile {
